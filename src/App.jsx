@@ -6,10 +6,10 @@ import './styles/App.css'
 function App() {
 
   return (
-    <>
+    <div className='main'>
       <h2>Tic-Tac-Toe</h2>
       <Board />
-    </>
+    </div>
   )
 }
 
