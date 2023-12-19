@@ -2,16 +2,11 @@ import { useState } from "react";
 
 import Square from "./Square";
 
-export default function Board({xIsNext, squares, onPlay}) {
-
-    // const [xIsNext, setXIsNext] = useState(true); // to keep track of who's next turn
-
-    // const [squares, setSquares] = useState(Array(9).fill(null));
-    // console.log(squares);
+export default function Board({ xIsNext, squares, onPlay }) {
 
     function handleClick(idx) {
         //checking if square is already has "X" or "O", then return
-        if (squares[idx] || calculateWinner(squares)) {
+        if (calculateWinner(squares) || squares[idx]) {
             return;
         }
 
